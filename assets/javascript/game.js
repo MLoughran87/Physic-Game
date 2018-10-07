@@ -8,7 +8,7 @@
     //the computer makes, letters is the total groupings of letters
 
     var guessesSofar = [];
-
+   //I think there is a better way to do this, but i had to just list them out indivudually 
     var letters = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p",
                     "a", "s", "d", "f", "g", "h", "j", "k", "l", "z",
                     "x", "c", "v", "b", "n", "m"]
@@ -23,7 +23,8 @@
 
 
     
-        // using onkeyup to capture player input 
+        // using onkeyup to capture player input - eventually it was registering in Console,
+        //but my final submit is a major error. 
 
     document.onkeyup = function (event){
         var playerGuess = event.key; 
@@ -59,10 +60,10 @@
                 guessesSofar = [];
                 guesses = 10;
         }
-        //
+        // If you're reading it, i couldn't get any further than i did, and need to get more tutoring. 
         else {
             guessesSofar.push(playerGuess);
-            document.getElementById('playerGuess').innerHTML = guessesSofar;
+            document.getElementById('playerGuess') = guessesSofar;
             console.log(guessesSofar);
 
         }
